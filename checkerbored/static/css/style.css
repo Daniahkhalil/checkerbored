@@ -1,22 +1,17 @@
 .red{
     background-color: red;
-
-    width: 10%;
+    width: 80px;
     display: inline-block;
-    height: 10px;
+    height: 60px;
 
 }
 .black{
     background-color:black ;
-    width: 10%;
+    width: 80px;
     display: inline-block;
-    height: 10px;
+    height:60px;
 }
-/* .row{
-    width: 50%;
-
-} */
 .container{
-
+    width: fit-content;
     margin: 0 auto;
 }

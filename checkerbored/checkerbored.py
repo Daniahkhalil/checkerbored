@@ -1,16 +1,20 @@
-from flask import Flask ,render_template # Import Flask to allow us to create our app
-app = Flask(__name__)    # Create a new instance of the Flask class called "app"
+from flask import Flask ,render_template 
+app = Flask(__name__)    
 
 
-@app.route('/')          # The "@" decorator associates this route with the function immediately following
+@app.route('/')          
 def hello_world():
     return render_template('index.html',rows=8,cols=4)  
 
     
-@app.route('/<int:rows>')          # The "@" decorator associates this route with the function immediately following
+@app.route('/<int:rows>')          
 def rows(rows):
-    return render_template('index.html',rows=rows,cols=4)  
- 
-if __name__=="__main__":   # Ensure this file is being run directly and not from a different module    
+    return render_template('index.html',rows=rows,cols=4) 
 
-    app.run(debug=True)    # Run the app in debug mode.
+@app.route('/<rows>/<cols>')          
+def rows_cols(rows,cols):
+    cols = int(cols)/2
+    return render_template('index_2.html',rows=int(rows),cols=int(cols))  
+
+if __name__=="__main__":     
+    app.run(debug=True)    
