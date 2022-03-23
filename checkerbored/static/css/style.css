@@ -1,7 +1,7 @@
 .red{
     background-color: red;
-    border: 2px solid red;
-    width: 10%;
+
+    width: 13%;
     display: inline-block;
     height: 10px;
 
@@ -12,10 +12,11 @@
     display: inline-block;
     height: 10px;
 }
-.row{
-    border:2px solid black;
-}
-.container{
+/* .row{
     width: 50%;
+
+} */
+.container{
+
     margin: 0 auto;
 }

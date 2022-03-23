@@ -12,15 +12,27 @@
 </head>
 <body>
     <div class="container"> 
-        {% for x in range(rows): %}
+        {% for x in range(0,rows): %}
+        {% if x %2 ==0 :%}
           <div calss="row">
-            {% for x in range(cols): %}
-              <div class="red"></div>
-              <div class="black"></div>
+            {% for x in range(0,cols): %}
+            
+            <div class="red"></div>
+               <div class="black"></div>
               {%endfor%}
-              <div class="red"></div>
-          </div>
+          
+              {%endif%}
+
+               {% if x %2 !=0 :%}
+               {% for x in range(cols): %}
+               <div class="black"></div>
+               <div class="red"></div>
+               {%endfor%}
+               
+               {%endif%}
+        
         {%endfor%}
+      </div>
     </div>
 </body>
 </html>
