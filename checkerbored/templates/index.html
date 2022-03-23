@@ -12,26 +12,29 @@
 </head>
 <body>
     <div class="container"> 
-        {% for x in range(0,rows): %}
-        {% if x %2 ==0 :%}
-          <div calss="row">
-            {% for x in range(0,cols): %}
-            
-            <div class="red"></div>
-               <div class="black"></div>
-              {%endfor%}
-          
-              {%endif%}
-
-               {% if x %2 !=0 :%}
-               {% for x in range(cols): %}
-               <div class="black"></div>
-               <div class="red"></div>
-               {%endfor%}
-               
-               {%endif%}
+      {% for x in range(rows): %}
+       
+      <div calss="row">
+        {% if x%2 ==0 :%}
+        {% for j in range(cols): %}
         
-        {%endfor%}
+          <div class="red"></div>
+          <div class="black"></div>
+          {%endfor%}
+        else
+          {%endif%}
+
+          {% if odd == true :%}
+          {% for x in range(cols): %}
+          <div class="black"></div>
+          <div class="red"></div>
+          {%endfor%}
+           
+          {%endif%}
+    
+    {%endfor%}
+  </div>
+
       </div>
     </div>
 </body>
