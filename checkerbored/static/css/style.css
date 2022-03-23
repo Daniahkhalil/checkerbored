@@ -1,0 +1,19 @@
+.red{
+    background-color: red;
+    border: 2px solid red;
+    width: 10%;
+    display: inline-block;
+    height: 10px;
+
+}
+.black{
+    background-color:black ;
+    width: 10%;
+    display: inline-block;
+    height: 10px;
+}
+
+.container{
+    width: 50%;
+    margin: 0 auto;
+}
